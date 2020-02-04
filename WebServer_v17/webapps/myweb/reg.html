@@ -1,0 +1,66 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>註冊</title>
+</head>
+<body>
+	<center>
+		<h1>歡迎註冊</h1>
+		<!-- 
+		    form表單
+		    表單的作用是可以將用戶輸入的信息
+		    提交到服務端。form裡面可以包含若干
+		    個輸入域，注意：只有被form標籤包含的
+		    輸入域中的內容才會被提交到服務端。
+		    
+		    form有兩個屬性：
+		    method:指定form表單以何種方式提交
+		           有GET，POSＴ兩種
+		    action:表單提交的地址，這兩個地址通常
+		    使用相對路徑
+		    注：頁面上的相對路徑中，“當前目錄”
+		    指的是當前頁面所在目錄。
+		    
+		    例如:action="reg",那麼服務端提交位置：
+		    請求當前頁面路徑：
+		    http://localhost:8088/myweb/reg.html
+		    瀏覽器判斷當前目錄為：
+		    http://localhost:8088/myweb/
+		    於是表單提交路徑為：
+		    http://localhost:8088/myweb/reg		    
+		    
+		 -->
+		<form action="reg" method="get">
+			<table border="1">
+				<tr>
+					<td>用戶名</td>
+					<td><input name="username" type="text" size="32"></td>
+				</tr>
+				<tr>
+					<td>密碼</td>
+					<td><input name="password" type="password" size="32"></td>
+				</tr>
+				<tr>
+					<td>名稱</td>
+					<td><input name="nickname" type="text" size="32"></td>
+				</tr>
+				<tr>
+					<td>年齡</td>
+					<td><input name="age" type="text" size="32"></td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2">
+					    <!-- 
+					         提交按鈕：
+					         提交按鈕的類型為：submit
+					         當點擊該按鈕時，會將包含該按鈕
+					         的表單進行提交。
+					     -->
+					    <input type="submit" value="註冊">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body>
+</html>
